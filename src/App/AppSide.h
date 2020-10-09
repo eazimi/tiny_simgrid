@@ -49,8 +49,6 @@ namespace app
         /* ACTOR */
         void create_actor(int actor_id, std::vector<S_TRANSITION_PARAMS_2> tr_params);
         void create_actor(int actor_id, std::vector<S_TRANSITION_PARAMS_3> tr_params);
-        // TODO: remove this function
-        std::deque<Actor> get_actors();
 
         /* TRANSITION */
         std::deque<std::string> get_trans0_tags() const;
@@ -67,8 +65,6 @@ namespace app
 
         /* MAILBOX */
         void create_mailbox(std::vector<int> mb_ids);
-        // TODO: remove this function
-        std::deque<Mailbox> get_mbs();
 
         /* STATE */
         int create_state(std::deque<Actor> &&actors, std::deque<Mailbox> &&mailboxes, bool is_state0 = false);

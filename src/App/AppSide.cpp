@@ -153,18 +153,6 @@ namespace app
         actors_->push_back(std::move(*actor));
     }
 
-    std::deque<Actor> AppSide::get_actors()
-    {
-        auto actors = *(actors_.get());
-        return actors;
-    }
-
-    std::deque<Mailbox> AppSide::get_mbs()
-    {
-        auto mbs = *(mailboxes_.get());
-        return mbs;
-    }
-
     void AppSide::add_transition(std::vector<Transition> const& transitions)
     {
         for (auto t : transitions)
