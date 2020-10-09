@@ -7,10 +7,6 @@
 namespace uc
 {
 
-    using Actor = app::Actor;
-    using Transition = app::Transition;
-    using Mailbox = app::Mailbox;
-
     class UnfoldingChecker
     {
         unsigned long expandedStatesCount_ = 0;
@@ -36,9 +32,6 @@ namespace uc
         void extend(Configuration C, std::list<EventSet> maxEvtHistory, EventSet &ExC, EventSet &enC) const;
         void remove(UnfoldingEvent *e, Configuration C, EventSet D);
         EventSet KpartialAlt(EventSet D, Configuration C) const;
-
-        void genEventFromCandidate(EventSet &result, Transition t, UnfoldingEvent *preEvt, EventSet U1, EventSet Uc);
-        EventSet filter(Configuration C, EventSet U);
 
         int error_count() { return error_; }
     };
